@@ -18,9 +18,15 @@ typedef struct {
   /**
    * List of tx hashes for which request should get trytes
    */
-  tx_hash_array hashes;
+  UT_array* hashes;
 
 } get_trytes_req_t;
+
+get_trytes_req_t* get_trytes_req_new();
+void get_trytes_req_free(get_trytes_req_t* req);
+
+void get_trytes_req_add_hash(get_trytes_req_t* req,
+                             char* hash);
 
 #ifdef __cplusplus
 }

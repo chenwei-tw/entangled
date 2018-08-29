@@ -17,5 +17,6 @@
 #include "get_tips.h"
 #include "get_transactions_to_approve.h"
 #include "remove_neighbors.h"
+#include "get_trytes.h"
 
 #endif  // CCLIENT_RESPONSE_RESPONSES_H

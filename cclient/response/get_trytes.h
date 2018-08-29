@@ -15,9 +15,14 @@ extern "C" {
 #include "types/types.h"
 
 typedef struct {
-  trit_array_array* trytes;
+  UT_array* trytes;
   size_t numTransactions;
 } get_trytes_res_t;
+
+get_trytes_res_t* get_trytes_res_new();
+void get_trytes_res_free(get_trytes_res_t* res);
+char *get_trytes_res_tryte_at(get_trytes_res_t* in, int index);
+int get_trytes_res_tryte_num(get_trytes_res_t* in);
 
 #ifdef __cplusplus
 }

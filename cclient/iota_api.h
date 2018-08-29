@@ -119,12 +119,13 @@ iota_api_result_t iota_api_find_transactions(
  * @param service IRI node end point.
  * @param req The request containing Hashes of transactions to which trytes are
  * to be retrieved
+ * @param res Response containing returned transactions trytes
  *
  * @return error value.
  */
 iota_api_result_t iota_api_get_trytes(const iota_http_service_t* const service,
                                       const get_trytes_req_t* const req,
-                                      char* trytes[]);
+                                      get_trytes_res_t* const res);
 
 /**
  * Get the inclusion states of a set of transactions. This is for determining if
